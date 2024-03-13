@@ -1,4 +1,10 @@
-export default function Page(){
-    return <h1>Hello NextJS 14</h1>
-}
+import Navigation from "../components/navigation";
 
+export default function Page(){
+    return (
+    <div>
+        <Navigation />
+        <h1>Hello!</h1>
+    </div>
+    );
+}
