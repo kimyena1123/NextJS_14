@@ -1,14 +1,25 @@
-//꼭 내보내야 하는 object
-export const metadata = {
-    title: 'Home',
-}
+"use client"
 
+import { useEffect, useState } from "react";
 
 export default function Page(){
+    const [movies, setMovies] = useState();
+
+    //정보 가져오기
+    const getMovies = async () => {
+        const response = await fetch('https://nomad-movies.nomadcoders.workers.dev/movies');
+        const json = await response.json();
+
+        setMovies(json);
+    }
+    useEffect(() => {
+        getMovies();
+    }, []);
+
     return (
     <div>
         {/* <Navigation /> */}
-        <h1>Hello!</h1>
+        {JSON.stringify(movies)};
     </div>
     );
 }
