@@ -2,18 +2,23 @@
 //localhost:3000/movies/:id
 
 import { Suspense } from "react";
-import MovieInfo from "../../../../components/movie-info";
+import MovieInfo, { getMovie } from "../../../../components/movie-info";
 import MovieVideos from "../../../../components/movie-videos";
 
-// export default function MovieDetail(props){
-//     console.log(props); //{ params: { id: 'adsf' }, searchParams: {} }
-//     console.log(props.params); //{ id: 'adsf' }
-//     return <h1>Movie</h1>
-// }
+interface IParams{
+    params: {id: string}
+}
 
+export async function generateMetadata({params: {id}}: IParams){
+    const movie = await getMovie(id);
+
+    return {
+        title: movie.title,
+    }
+}
 
 {/* <MovieDetail params={{id: 1234}} /> */}
-export default async function MovieDetail({params: {id}}: {params:{id: string}}){
+export default async function MovieDetailPage({params: {id}}: IParams){ //MovieDetail({params: {id}}: {params:{id: string}})
     // const [movie, videos] = await Promise.all([getMovie(id), getVideos(id)]);
     
     return (
