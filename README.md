@@ -12,6 +12,8 @@ dev를 위와 같이 변경
 
 npm run dev로 시작
 
+https://nomad-movies.nomadcoders.workers.dev/
+
 - /: This page
 - /movies : List popular movies
 - /movies/:id : Get Movie by :id
