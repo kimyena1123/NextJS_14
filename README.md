@@ -1,6 +1,9 @@
 npm init -y
 npm install react@latest next@latest react-dom@latest
 
+//typescript 설치
+npm install --save-dev typescript
+
 package.json 파일에서
   "scripts": {
     "dev": "next dev"
