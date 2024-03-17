@@ -1,11 +1,13 @@
 import Movie from "../../components/movie";
 import styles from "../../styles/home.module.css";
+import { API_URL } from "../constants";
 
 export const metadata = {
     title: "Home",
 };
 
-export const API_URL = "https://nomad-movies.nomadcoders.workers.dev/movies";
+//API_URL을 export할 수 없어서 constants.ts로 옮겨준다.
+// export const API_URL = "https://nomad-movies.nomadcoders.workers.dev/movies";
 
 async function getMovies(){
     // await new Promise((resolve) => setTimeout(resolve, 1000));
