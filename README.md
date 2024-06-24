@@ -12,6 +12,7 @@ dev를 위와 같이 변경
 
 npm run dev로 시작
 
+# url info
 https://nomad-movies.nomadcoders.workers.dev/
 
 - /: This page
@@ -21,3 +22,6 @@ https://nomad-movies.nomadcoders.workers.dev/
 - /movies/:id/videos : Get vodios for a movie by :id
 - /movies/:id/providers: Get providers for a movie by :id
 - /movies/:id/similar : Get similar movies for a movie by :id
+
+# 결과
+https://nextjs-movies-jade.vercel.app/
